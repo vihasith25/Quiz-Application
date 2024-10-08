@@ -1,43 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Application</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Quiz App</title>
 </head>
 <body>
-    <div class="quiz-container">
-        <h1>Quiz Application</h1>
-        <div id="topic-selection">
-            <label for="topic">Choose a topic:</label>
-            <select id="topic">
-                <option value="javascript">JavaScript</option>
-                <option value="css">CSS</option>
-                <option value="html">HTML</option>
-                <option value="python">Python</option>
-                <option value="c">C</option>
-                <option value="java">Java</option>
-                <option value="ml">Machine Learning</option>
-                <option value="ds">Data Structures</option>
-            </select>
-            <button onclick="startQuiz()">Start Quiz</button>
-        </div>
-
-        <div id="quiz" class="hidden">
-            <p id="question"></p>
-            <div id="options"></div>
-            <button id="submit-btn" onclick="submitAnswer()">Submit</button>
-            <p id="feedback"></p>
-        </div>
-
-        <div id="score-summary" class="hidden">
-            <h2>Final Score:</h2>
-            <p id="final-score"></p>
-            <button onclick="restartQuiz()">Restart</button>
-        </div>
+  <div class="quiz-container" id="quiz">
+    <div class="quiz-header" id="topic-selection">
+      <h2>Select a Quiz Topic</h2>
+      <button class="topic-btn" data-topic="JavaScript">JavaScript</button>
+      <button class="topic-btn" data-topic="CSS">CSS</button>
+      <button class="topic-btn" data-topic="HTML">HTML</button>
+      <button class="topic-btn" data-topic="Python">Python</button>
+      <button class="topic-btn" data-topic="C">C</button>
+      <button class="topic-btn" data-topic="Java">Java</button>
+      <button class="topic-btn" data-topic="Machine Learning">Machine Learning</button>
+      <button class="topic-btn" data-topic="Data Structures">Data Structures</button>
     </div>
-
-    <script src="script.js"></script>
+    <div id="quiz-content" class="hidden">
+      <h2 id="question">Question text</h2>
+      <div id="progress">Question <span id="currentQuestion">1</span> of <span id="totalQuestions">5</span></div>
+      <ul>
+        <li>
+          <input type="radio" name="answer" id="a" class="answer">
+          <label for="a" id="a_text">Question</label>
+        </li>
+        <li>
+          <input type="radio" name="answer" id="b" class="answer">
+          <label for="b" id="b_text">Question</label>
+        </li>
+        <li>
+          <input type="radio" name="answer" id="c" class="answer">
+          <label for="c" id="c_text">Question</label>
+        </li>
+        <li>
+          <input type="radio" name="answer" id="d" class="answer">
+          <label for="d" id="d_text">Question</label>
+        </li>
+      </ul>
+      <button id="submit">Submit</button>
+      <div id="feedback" class="hidden"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
