@@ -1,0 +1,431 @@
+const quizData = {
+    JavaScript: [
+      {
+        question: "Which language runs in a web browser?",
+        a: "Java",
+        b: "C",
+        c: "Python",
+        d: "JavaScript",
+        correct: "d",
+      },
+      {
+        question: "What year was JavaScript launched?",
+        a: "1996",
+        b: "1995",
+        c: "1994",
+        d: "none of the above",
+        correct: "b",
+      },
+      {
+        question: "Which of the following is used for styling web pages?",
+        a: "HTML",
+        b: "JavaScript",
+        c: "CSS",
+        d: "None of the above",
+        correct: "c",
+      },
+      {
+        question: "Which symbol is used for comments in JavaScript?",
+        a: "//",
+        b: "/*",
+        c: "#",
+        d: "--",
+        correct: "a",
+      },
+      {
+        question: "What is the purpose of the `this` keyword in JavaScript?",
+        a: "It refers to the global object",
+        b: "It refers to the function itself",
+        c: "It refers to the object it belongs to",
+        d: "It does nothing",
+        correct: "c",
+      },
+    ],
+    CSS: [
+      {
+        question: "What does CSS stand for?",
+        a: "Central Style Sheets",
+        b: "Cascading Style Sheets",
+        c: "Cascading Simple Sheets",
+        d: "Cars SUVs Sailboats",
+        correct: "b",
+      },
+      {
+        question: "Which property is used to change the background color?",
+        a: "color",
+        b: "bgcolor",
+        c: "background-color",
+        d: "background",
+        correct: "c",
+      },
+      {
+        question: "How do you select an element with the ID 'header'?",
+        a: ".header",
+        b: "#header",
+        c: "header",
+        d: "*header",
+        correct: "b",
+      },
+      {
+        question: "What does the `float` property do?",
+        a: "It moves an element to the left or right",
+        b: "It makes an element invisible",
+        c: "It changes the font size",
+        d: "It adds a margin",
+        correct: "a",
+      },
+      {
+        question: "How do you add a comment in CSS?",
+        a: "// this is a comment",
+        b: "/* this is a comment */",
+        c: "<!-- this is a comment -->",
+        d: "this is a comment",
+        correct: "b",
+      },
+    ],
+    HTML: [
+      {
+        question: "What does HTML stand for?",
+        a: "Hypertext Markup Language",
+        b: "Hypertext Markdown Language",
+        c: "Hyperloop Machine Language",
+        d: "Helicopters Terminals Motorboats Lamborginis",
+        correct: "a",
+      },
+      {
+        question: "Which tag is used to create a hyperlink?",
+        a: "<link>",
+        b: "<a>",
+        c: "<href>",
+        d: "<hyperlink>",
+        correct: "b",
+      },
+      {
+        question: "What is the correct HTML for inserting an image?",
+        a: "<image src='image.jpg'>",
+        b: "<img href='image.jpg'>",
+        c: "<img src='image.jpg'>",
+        d: "<img src='image'>",
+        correct: "c",
+      },
+      {
+        question: "Which element is used for the largest heading?",
+        a: "<heading>",
+        b: "<h6>",
+        c: "<h1>",
+        d: "<h0>",
+        correct: "c",
+      },
+      {
+        question: "What is the purpose of the `<meta>` tag?",
+        a: "To define metadata about an HTML document",
+        b: "To create a link to a stylesheet",
+        c: "To create a script tag",
+        d: "To define a header",
+        correct: "a",
+      },
+    ],
+    Python: [
+      {
+        question: "What is the correct way to define a function in Python?",
+        a: "function myFunction()",
+        b: "def myFunction()",
+        c: "function:myFunction()",
+        d: "def:myFunction()",
+        correct: "b",
+      },
+      {
+        question: "Which of the following is a Python tuple?",
+        a: "[1, 2, 3]",
+        b: "(1, 2, 3)",
+        c: "{1, 2, 3}",
+        d: "<1, 2, 3>",
+        correct: "b",
+      },
+      {
+        question: "Which of the following is a mutable type in Python?",
+        a: "Tuple",
+        b: "String",
+        c: "List",
+        d: "Integer",
+        correct: "c",
+      },
+      {
+        question: "What keyword is used to handle exceptions in Python?",
+        a: "try",
+        b: "except",
+        c: "catch",
+        d: "finally",
+        correct: "b",
+      },
+      {
+        question: "What does the `len()` function do?",
+        a: "Returns the length of an object",
+        b: "Adds two numbers",
+        c: "Checks the type of an object",
+        d: "Creates a list",
+        correct: "a",
+      },
+    ],
+    C: [
+      {
+        question: "What is the correct syntax for a `for` loop in C?",
+        a: "for(i = 0; i < 5; i++)",
+        b: "for(i < 5; i++)",
+        c: "for(i = 0; i < 5)",
+        d: "for(i < 5; i = 0; i++)",
+        correct: "a",
+      },
+      {
+        question: "What does `printf` function do?",
+        a: "Prints to console",
+        b: "Scans input",
+        c: "Returns value",
+        d: "Allocates memory",
+        correct: "a",
+      },
+      {
+        question: "Which header file is required for using `printf`?",
+        a: "<stdio.h>",
+        b: "<stdlib.h>",
+        c: "<conio.h>",
+        d: "<string.h>",
+        correct: "a",
+      },
+      {
+        question: "What is the return type of the `main` function in C?",
+        a: "void",
+        b: "int",
+        c: "char",
+        d: "float",
+        correct: "b",
+      },
+      {
+        question: "What symbol is used for comments in C?",
+        a: "//",
+        b: "/*",
+        c: "#",
+        d: "--",
+        correct: "a",
+      },
+    ],
+    Java: [
+      {
+        question: "What is the main method signature in Java?",
+        a: "public static void main(String[] args)",
+        b: "void main(String[] args)",
+        c: "public void main()",
+        d: "static void main(String[] args)",
+        correct: "a",
+      },
+      {
+        question: "What is the default value of an int variable in Java?",
+        a: "0",
+        b: "null",
+        c: "undefined",
+        d: "1",
+        correct: "a",
+      },
+      {
+        question: "Which of the following is a valid declaration of a char?",
+        a: "char c = 'a';",
+        b: "char c = 'ab';",
+        c: "char c = a;",
+        d: "char c = \"a\";",
+        correct: "a",
+      },
+      {
+        question: "What is the keyword used to create a class in Java?",
+        a: "class",
+        b: "def",
+        c: "create",
+        d: "new",
+        correct: "a",
+      },
+      {
+        question: "Which of these is not a Java primitive type?",
+        a: "int",
+        b: "boolean",
+        c: "String",
+        d: "char",
+        correct: "c",
+      },
+    ],
+    "Machine Learning": [
+      {
+        question: "What is overfitting in machine learning?",
+        a: "When a model performs well on training data but poorly on unseen data",
+        b: "When a model performs well on unseen data but poorly on training data",
+        c: "When a model is too simple",
+        d: "None of the above",
+        correct: "a",
+      },
+      {
+        question: "Which of the following is a supervised learning algorithm?",
+        a: "K-means Clustering",
+        b: "Decision Trees",
+        c: "Principal Component Analysis",
+        d: "None of the above",
+        correct: "b",
+      },
+      {
+        question: "What does 'label' refer to in machine learning?",
+        a: "The input data",
+        b: "The output or target variable",
+        c: "The model's parameters",
+        d: "The algorithm used",
+        correct: "b",
+      },
+      {
+        question: "Which metric is commonly used to evaluate classification models?",
+        a: "Mean Absolute Error",
+        b: "Accuracy",
+        c: "Root Mean Squared Error",
+        d: "R-squared",
+        correct: "b",
+      },
+      {
+        question: "What is a confusion matrix?",
+        a: "A table used to evaluate the performance of a classification model",
+        b: "A technique for feature selection",
+        c: "A way to visualize data",
+        d: "None of the above",
+        correct: "a",
+      },
+    ],
+    "Data Structures": [
+      {
+        question: "What is the time complexity of accessing an element in an array?",
+        a: "O(1)",
+        b: "O(n)",
+        c: "O(log n)",
+        d: "O(n^2)",
+        correct: "a",
+      },
+      {
+        question: "Which data structure uses LIFO?",
+        a: "Queue",
+        b: "Stack",
+        c: "Array",
+        d: "Linked List",
+        correct: "b",
+      },
+      {
+        question: "What is the primary advantage of linked lists over arrays?",
+        a: "Easy to access elements",
+        b: "Dynamic size",
+        c: "Fast searching",
+        d: "Random access",
+        correct: "b",
+      },
+      {
+        question: "Which of the following is not a linear data structure?",
+        a: "Array",
+        b: "Linked List",
+        c: "Stack",
+        d: "Tree",
+        correct: "d",
+      },
+      {
+        question: "In a binary tree, which node has at most two children?",
+        a: "Root",
+        b: "Leaf",
+        c: "Internal",
+        d: "None of the above",
+        correct: "c",
+      },
+    ],
+  };
+  
+  const quizContainer = document.getElementById('quiz');
+  const topicSelection = document.getElementById('topic-selection');
+  const quizContent = document.getElementById('quiz-content');
+  const answerEls = document.querySelectorAll('.answer');
+  const questionEl = document.getElementById('question');
+  const a_text = document.getElementById('a_text');
+  const b_text = document.getElementById('b_text');
+  const c_text = document.getElementById('c_text');
+  const d_text = document.getElementById('d_text');
+  const submitBtn = document.getElementById('submit');
+  const currentQuestionEl = document.getElementById('currentQuestion');
+  const totalQuestionsEl = document.getElementById('totalQuestions');
+  const feedback = document.getElementById('feedback');
+  
+  let currentQuiz = 0;
+  let score = 0;
+  let selectedTopic = '';
+  let totalQuestions = 0;
+  
+  document.querySelectorAll('.topic-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      selectedTopic = button.dataset.topic;
+      totalQuestions = quizData[selectedTopic].length;
+      topicSelection.classList.add('hidden');
+      quizContent.classList.remove('hidden');
+      totalQuestionsEl.innerText = totalQuestions;
+      loadCurrentQuestion();
+    });
+  });
+  
+  function loadCurrentQuestion() {
+    deselectAnswers();
+    feedback.classList.add('hidden');
+  
+    const currentQuizData = quizData[selectedTopic][currentQuiz];
+    questionEl.innerText = currentQuizData.question;
+    a_text.innerText = currentQuizData.a;
+    b_text.innerText = currentQuizData.b;
+    c_text.innerText = currentQuizData.c;
+    d_text.innerText = currentQuizData.d;
+    currentQuestionEl.innerText = currentQuiz + 1;
+  }
+  
+  function deselectAnswers() {
+    answerEls.forEach(answerEl => answerEl.checked = false);
+  }
+  
+  function getSelected() {
+    let answer;
+    answerEls.forEach(answerEl => {
+      if (answerEl.checked) {
+        answer = answerEl.id;
+      }
+    });
+    return answer;
+  }
+  
+  submitBtn.addEventListener('click', () => {
+    const answer = getSelected();
+    
+    if (answer) {
+      if (answer === quizData[selectedTopic][currentQuiz].correct) {
+        score++;
+        feedback.innerText = "Correct!";
+        feedback.classList.remove('hidden');
+        feedback.style.color = 'green';
+      } else {
+        feedback.innerText = "Incorrect!";
+        feedback.classList.remove('hidden');
+        feedback.style.color = 'red';
+      }
+  
+      currentQuiz++;
+      
+      setTimeout(() => {
+        feedback.classList.add('hidden');
+        if (currentQuiz < totalQuestions) {
+          loadCurrentQuestion();
+        } else {
+          showResult();
+        }
+      }, 1500);
+    }
+  });
+  
+  function showResult() {
+    quizContainer.innerHTML = `
+      <h2>You answered ${score}/${totalQuestions} questions correctly!</h2>
+      <button onclick="location.reload()">Reload</button>
+    `;
+  }
+  
